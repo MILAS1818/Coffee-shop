@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* Gradasi Latar Belakang */
+  background: linear-gradient(to bottom, #2e1e1e, #4a403a, #615b55);
+  background-attachment: fixed; /* Membuat gradasi tetap saat di-scroll */
+  color: #f5f3ef; /* Warna teks utama menjadi putih hangat agar kontras */
+  line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: rgba(
+    46,
+    30,
+    30,
+    0.85
+  ); /* Warna header senada dengan body, tapi sedikit transparan */
+  backdrop-filter: blur(5px); /* Efek blur agar terlihat modern */
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #f5f3ef; /* Warna link nav */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d1a56f; /* Aksen emas untuk hover */
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1624840499167-9455861d447d?w=1920&q=100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero a {
+  background: #d1a56f;
+  color: #2e1e1e; /* Warna teks tombol lebih gelap */
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero a:hover {
+  background: #c08e52;
+}
+
+/* --- SECTIONS --- */
+section {
+  padding: 60px 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* --- MENU ITEMS --- */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-item {
+  background: #3e2c23; /* Latar belakang item menu menjadi cokelat gelap */
+  color: #f5f3ef; /* Warna teks item menu */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.menu-item h3 {
+  color: #f5f3ef; /* Pastikan judul tetap terlihat */
+}
+
+.menu-item p {
+  color: #c9c0b3; /* Warna deskripsi agar sedikit berbeda */
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  background: #4a403a; /* Perubahan warna saat hover */
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-item button {
+  background: #d1a56f; /* Warna tombol "Tambah ke Keranjang" */
+  color: #2e1e1e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-item button:hover {
+  background: #c08e52;
+}
+
+/* --- OTHER SECTIONS --- */
+.about-section,
+.testimoni-section,
+.location-section,
+.contact-section {
+  background: rgba(30, 24, 24, 0.7); /* Latar belakang transparan */
+  margin: 40px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h2,
+.testimoni-section h2,
+.location-section h2,
+.contact-section h2 {
+  color: #d1a56f; /* Warna judul untuk kontras */
+}
+
+.about-section p,
+.location-section p {
+  color: #c9c0b3; /* Warna teks paragraf */
+}
+
+.testimoni-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+blockquote {
+  background: rgba(48, 40, 40, 0.7); /* Latar belakang blockquote */
+  border-left: 4px solid #d1a56f;
+  padding: 15px;
+  border-radius: 8px;
+  color: #f5f3ef;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #d1a56f;
+}
+
+/* --- CONTACT FORM --- */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #615b55;
+  background-color: #4a403a; /* Latar belakang input */
+  color: #f5f3ef;
+  border-radius: 8px;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: #998c80; /* Warna placeholder */
+}
+
+.contact-section button {
+  background: #d1a56f;
+  color: #2e1e1e;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-section button:hover {
+  background: #c08e52;
+}
+
+/* --- KERANJANG & POP-UP --- */
+/* Pastikan Anda juga menerapkan gaya untuk pop-up keranjang yang sudah kita buat sebelumnya */
+
+#cart-list li {
+  background: #4a403a; /* Latar belakang item keranjang */
+  color: #f5f3ef;
+  padding: 12px 15px;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-btn {
+  background: #d1a56f;
+  color: #2e1e1e;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#checkout-btn:hover {
+  background: #c08e52;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #1c1c1c; /* Warna footer sangat gelap */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
